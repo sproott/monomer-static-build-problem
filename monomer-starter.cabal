@@ -24,7 +24,9 @@ executable app
       src
   default-extensions:
       OverloadedStrings
-  ghc-options: -fwarn-incomplete-patterns -threaded
+  ghc-options: -fwarn-incomplete-patterns -threaded -static
+  cc-options: -static
+  ld-options: -static -pthread
   build-depends:
       base >=4.7 && <5
     , data-default
